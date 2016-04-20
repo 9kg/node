@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form id="adver">
+        <label><input type="checkbox"  value="id">ID</label>
+        <label><input type="checkbox"  value="bd_value">商务</label>
+        <label><input type="checkbox"  value="company">公司</label>
+        <label><input type="checkbox"  value="value">姓名</label>
+        <label><input type="checkbox"  value="phone">电话</label>
+        <label><input type="checkbox" value="discount">折扣率(免费)</label>
+        <label><input type="checkbox" value="discount_charge">折扣率(付费)</label>
+        <label><input type="checkbox" value="price_all">累计消费</label>
+        <label><input type="checkbox"  value="money">余额</label>
+        <label><input type="checkbox" value="taskNum">累计任务完成数</label>
+        <label><input type="checkbox"  value="username">账号</label>
+    </form>
+    <button type="button" id="btn_export">导出</button>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript">
+        var host = "http://127.0.0.1:9211";
+        var baseOper = host + '/node/oper';
+        function test(){
+            window.open(baseOper+'download');
+        }
+        $("#btn_export").click(function(){
+            var tt = $.map($('[name="adver"]:checked'),function(item,i){
+                return item.value;
+            });
+            var sendData = $('form input').serializeArray();
+            $.ajax({
+                type: "POST",
+                url: baseOper,
+                data: sendData,
+                dataType: "json",
+                success: function(data){
+                    console.log(host+data.link);
+                    $(this).addClass("done");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

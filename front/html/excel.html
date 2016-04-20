@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>上海厚步网络科技有限公司</title>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
+</head>
+
+<body>
+    <div class="content">
+        <div id="login" class="page">
+            <form class="page_ct grid"><span class="step">1</span>
+                <div class="ct">
+                    <div class="ct_3 field">账号</div>
+                    <div class="ct_3-2">
+                        <input id="login_username" type="text" name="username">
+                    </div>
+                </div>
+                <div class="ct">
+                    <div class="ct_3 field">密码</div>
+                    <div class="ct_3-2">
+                        <input id="login_password" type="password" name="password">
+                    </div>
+                </div>
+                <div class="ct">
+                    <button type="button" data-step="#table" class="btn btn_info">下一步</button>
+                </div>
+            </form>
+        </div>
+        <div id="table" class="page hidden_page">
+            <div class="page_ct grid"><span class="step">2</span>
+                <div class="ct">
+                    <label class="radio">
+                        <input type="radio" name="table_check" data-show=".adver_checks" checked="" value="adver"><span class="opt_imitate"></span><span class="opt_desc">广告主</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="table_check" data-show=".task_checks" value="task"><span class="opt_imitate"></span><span class="opt_desc">任务</span>
+                    </label>
+                </div>
+                <div class="ct">
+                    <button type="button" data-step="#login" class="btn btn_info">上一步</button>
+                    <button type="button" data-step="#field" class="btn btn_info">下一步</button>
+                </div>
+            </div>
+        </div>
+        <div id="field" class="page hidden_page">
+            <div class="page_ct grid">
+                <span class="step">3</span>
+                <div class="check_opt_ct grid adver_checks">
+                    <div class="ct select_all">
+                        <label class="checkbox">
+                            <input type="checkbox" class="check_all"><span class="opt_imitate"></span><span class="opt_desc">全选</span>
+                        </label>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="id"><span class="opt_imitate"></span><span class="opt_desc">ID</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="bd_name"><span class="opt_imitate"></span><span class="opt_desc">商务</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="company"><span class="opt_imitate"></span><span class="opt_desc">公司</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="name"><span class="opt_imitate"></span><span class="opt_desc">姓名</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="phone"><span class="opt_imitate"></span><span class="opt_desc">电话</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="discount"><span class="opt_imitate"></span><span class="opt_desc">折扣率(免费)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="discount_charge"><span class="opt_imitate"></span><span class="opt_desc">折扣率(付费)</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="price_all"><span class="opt_imitate"></span><span class="opt_desc">累计消费</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="money"><span class="opt_imitate"></span><span class="opt_desc">余额</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="taskNum"><span class="opt_imitate"></span><span class="opt_desc">累计任务完成数</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="username"><span class="opt_imitate"></span><span class="opt_desc">账号</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="check_opt_ct grid hidden task_checks">
+                    <div class="ct select_all">
+                        <label class="checkbox">
+                            <input type="checkbox" class="check_all"><span class="opt_imitate"></span><span class="opt_desc">全选</span>
+                        </label>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="id"><span class="opt_imitate"></span><span class="opt_desc">ID</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="name"><span class="opt_imitate"></span><span class="opt_desc">名称</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="keyword"><span class="opt_imitate"></span><span class="opt_desc">关键词</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="company"><span class="opt_imitate"></span><span class="opt_desc">公司</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="pname"><span class="opt_imitate"></span><span class="opt_desc">商务</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="stime"><span class="opt_imitate"></span><span class="opt_desc">开始时间</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="adTemp"><span class="opt_imitate"></span><span class="opt_desc">来源</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="taskprice"><span class="opt_imitate"></span><span class="opt_desc">单价</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="power"><span class="opt_imitate"></span><span class="opt_desc">状态</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ct grid_nowrap">
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="countall"><span class="opt_imitate"></span><span class="opt_desc">投放数</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="num_finish"><span class="opt_imitate"></span><span class="opt_desc">已完成数</span>
+                            </label>
+                        </div>
+                        <div class="ct_3">
+                            <label class="checkbox">
+                                <input type="checkbox" value="iscomment"><span class="opt_imitate"></span><span class="opt_desc">评论占比</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="ct">
+                    <button type="button" data-step="#table" class="btn btn_info">上一步</button>
+                    <button type="button" class="btn btn_info">导出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var token;
+        var urlObj = {
+            adver: "http://es1.laizhuan.com/bd_m/userListAd",
+            task: "http://es1.laizhuan.com/bd_m/taskList"
+        };
+        var host = "http://192.168.1.120:9211";
+        var baseOper = host + '/node/oper';
+        // 登录遮罩
+        var mask = new Mask({
+            isShow: false,
+            content: "登录中..."
+        });
+        // 登录提示消息
+        var login_tip = new Tip({
+            $ct: $("#login .page_ct .ct").eq(0),
+            content: '请先登录有对应权限的账号！',
+            dir: "top",
+            timeout: 3500,
+            css: {
+                "white-space": "nowrap",
+                "top": "-50px"
+            },
+            theme: "warning"
+        });
+        // 选择表格提示消息
+        var table_tip = new Tip({
+            $ct: $("#table .page_ct .ct").eq(0),
+            content: '请选择要导出数据的表格！',
+            dir: "top",
+            isShow: false,
+            timeout: 3500,
+            css: {
+                "white-space": "nowrap",
+                "top": "-50px"
+            },
+            theme: "warning"
+        });
+        // 选择数据列提示消息
+        var field_tip = new Tip({
+            $ct: $("#field .page_ct .check_opt_ct"),
+            content: '请选择要导出数据列！',
+            dir: "top",
+            isShow: false,
+            timeout: 3500,
+            css: {
+                "white-space": "nowrap",
+                "top": "-50px"
+            },
+            theme: "warning"
+        });
+
+        // 点击按钮
+        $('body').on('click', '.btn', function() {
+            var step = $(this).attr('data-step');
+            if ($(this).closest('#login').length) {
+                mask.show();
+                var data = login(step);
+                if (!data) {
+                    changeTip(login_tip);
+                    mask.hide();
+                    return;
+                }
+                if (data.error !== 1) {
+                    changeTip(login_tip, data.msg);
+                    mask.hide();
+                    return;
+                } else {
+                    if (data.aaData.role != 5) {
+                        changeTip(login_tip, "账号权限不正确！");
+                        mask.hide();
+                        return;
+                    } else {
+                        token = data.aaData.token;
+                        changeTip(login_tip, "登录成功", "success");
+                    }
+                }
+                mask.hide();
+            }
+            if (step) {
+                step2page(step);
+                if (step === '#field') {
+                    changeTip(field_tip, "请选择要导出数据列！", "warning");
+                    field_tip.show();
+                }
+            } else {
+                sendData();
+            }
+        });
+        // 登录
+        function login(step) {
+            var data;
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "http://es1.laizhuan.com/user/login",
+                data: $("form.page_ct").serialize(),
+                dataType: "json",
+                beforeSend: function() {
+                    mask.renderContent("登录中...");
+                    mask.show();
+                }
+            }).always(function(obj) {
+                data = obj;
+            });
+            return data;
+        }
+        // 登录提示消息变换
+        function changeTip(tip, cnt, theme) {
+            tip.content = cnt || '登录失败';
+            tip.theme = theme || "danger";
+            tip.toggle(theme !== "success");
+            tip.init();
+        }
+        // 跳转页并显示对应的提示消息
+        function step2page(step) {
+            $(".page").addClass("hidden_page");
+            $(step).removeClass("hidden_page");
+            eval(step.slice(1) + "_tip.show();");
+        }
+        // 向后台发送数据
+        function sendData() {
+            var $check_ct = $(".check_opt_ct:not(.hidden)");
+            var excelname = $check_ct.is(".adver_checks") ? "adver" : "task";
+            var url = urlObj[excelname] + "?token=" + token;
+            var $checks = $check_ct.find('[type="checkbox"]:checked:not(.check_all)');
+            if (!$checks.length) {
+                changeTip(field_tip, "请选择要导出数据列！");
+                field_tip.show();
+            } else {
+                field_tip.hide();
+
+                var datas = $.map($checks, function(item) {
+                    return {
+                        title: $(item).nextAll(".opt_desc").text(),
+                        attr: $(item).val()
+                    };
+                });
+                $.ajax({
+                    type: "POST",
+                    url: baseOper,
+                    data: JSON.stringify({
+                        url: url,
+                        col: datas,
+                        excelname: excelname
+                    }),
+                    dataType: "json",
+                    beforeSend: function() {
+                        mask.renderContent("后台处理中...");
+                        mask.show();
+                    }
+                }).done(function(data) {
+                    var fileUrl = host + data.link;
+                    console.log(fileUrl);
+                    window.open(fileUrl);
+
+                }).always(function() {
+                    mask.hide();
+                });
+            }
+        }
+
+        // 按下enter下一步
+        $(window).keydown(function(event) {
+            if (event.keyCode === 13) {
+                $('.page:not(.hidden_page)').find(".btn").last().trigger("click");
+            }
+        });
+        // 全选
+        $('.check_all').bind('change',function(){
+            $(this).closest(".check_opt_ct").find('[type="checkbox"]:not(.check_all)').prop("checked",$(this).prop("checked"));
+        });
+        $('.check_opt_ct [type="checkbox"]:not(.check_all)').bind('change',function(){
+            $(this).closest(".check_opt_ct").find('.check_all').prop("checked",!$('.check_opt_ct:not(.hidden) [type="checkbox"]:not(.check_all):not(:checked)').length);
+        });
+
+    });
+    </script>
+</body>
+
+</html>
