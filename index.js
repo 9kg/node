@@ -16,7 +16,10 @@ function start(){
         var base = path.basename(pathname);
         var extname = path.extname(pathname);
 
-        console.dir(req);
+        console.dir(req.headers.host);
+        if(req.headers.host === "115.159.222.71"){
+            req.headers.host === "www.unruly.wang";
+        }
         if(base === "oper"){
             oper(req,resp,extname);
         }else{
@@ -45,7 +48,7 @@ function start(){
                 ftf(resp);
             }
         }
-    }).listen(9211);
+    }).listen(80);
 }
 function oper(req,resp,extname){
     req.setEncoding('utf-8');
