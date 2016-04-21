@@ -17,9 +17,7 @@ function start(){
         var extname = path.extname(pathname);
 
         console.dir(req.headers.host);
-        if(req.headers.host === "115.159.222.71"){
-            req.headers.host === "www.unruly.wang";
-        }
+        
         if(base === "oper"){
             oper(req,resp,extname);
         }else{
